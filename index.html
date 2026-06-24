@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login</title>
+  <title>Unlock</title>
 </head>
-<body style="text-align:center; margin-top:100px;">
 
-  <h2>Enter Password</h2>
+<body style="
+  margin:0;
+  height:100vh;
+  background-image:url('bg.png');
+  background-size:cover;
+  background-position:center;
+">
 
-  <input type="password" id="pass" placeholder="password">
-  <button onclick="check()">Unlock</button>
-
-  <p id="msg"></p>
+  <!-- منطقة الضغط (زر مخفي فوق التصميم) -->
+  <div onclick="goNext()" style="
+    position:absolute;
+    bottom:120px;
+    left:50%;
+    transform:translateX(-50%);
+    width:220px;
+    height:70px;
+    cursor:pointer;
+  "></div>
 
   <script>
-    function check() {
-      let code = document.getElementById("pass").value;
-
-      if (code === "1601") {
-        window.location.href = "home.html";
-      } else {
-        document.getElementById("msg").innerText = "Wrong code";
-      }
+    function goNext(){
+      window.location.href = "home.html";
     }
   </script>
 
